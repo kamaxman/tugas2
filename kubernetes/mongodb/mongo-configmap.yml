@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
     name: mongo-config
 data:
-    mongo.conf:
+    mongo.conf: |
         storage:
             dbPath: /data/db
