@@ -8,14 +8,16 @@ spec:
   storageClassName: manual
   capacity:
     storage: 20Gi
-  accessNodes:
+  accessModes:
     - ReadWriteOnce
   hostPath:
     path: "/mnt/data"
+
 ---
+
 apiVersion: v1
 kind: PersistentVolumeClaim
- metadata:
+metadata:
   name: mongo-pvc
 spec:
   storageClassName: manual
@@ -23,4 +25,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      strorage: 20Gi
+      storage: 10Gi
